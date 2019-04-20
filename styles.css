@@ -1,0 +1,46 @@
+.container{
+    background-color: #ccc;
+    height: 500px;
+    display: flex;
+
+    /* define a direção dos itens */
+    flex-direction: row;
+    /* define se os itens tem quebra de linha ou não */
+    flex-wrap: nowrap;
+    /* uma forma resumida de implementar os dois a cima*/
+    flex-flow: row nowrap; 
+    /* Define o alinhamento horizontal */
+    justify-content: flex-start;
+    /* Define o alinhamento vertical*/
+    align-items: stretch;
+    /* Define alinhamento vertical quando se tem quebra de linha wrap */
+    align-content: flex-start;
+}
+
+.item {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    margin: 5px;
+    height: 30px;
+    flex-grow: 1; /* Define o padrão */
+    flex-shrink: 1;
+    flex-basis: 300px; /* tamanho inicial dos itens */
+    flex: 1 1 300px; /* versão resumida flex-grow / flex-shrink / flex-basic  */ 
+
+}
+.article-1{ 
+    /* order: 3;  */ /* define a ordem */
+}
+.article-2{ 
+    /* order: 1;  */
+    /* align-self: auto;  */ /* alinhamento do item */
+    /*  flex-grow: 3; */ /* define um valor difente de flex-grow para o item */
+    flex-shrink: 3; /* define 3x menos que o valor flex-shrink definido no pai */
+}
+.article-3{
+    /* order: 2; */ 
+}
+.article-4{ 
+    /* order: 4;  */
+}
